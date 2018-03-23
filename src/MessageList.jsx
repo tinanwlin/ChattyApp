@@ -3,10 +3,9 @@ import Message from './Message.jsx';
 
 class MessageList extends Component {
   render() {
-    console.log('render <MsgLiat/>')
-    const messagesList = this.props.messages.map((message) => {
+    const messagesList = this.props.messages.map((message,index) => {
       return (
-         <Message key={message.id} message={message}/>
+         <Message key={message.id} message={message} index={index} notification={this.props.notifications[index]}/>
       )
     })
 
